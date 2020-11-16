@@ -43,39 +43,46 @@
 //     document.querySelector('body').removeAttribute('class');
 // })
 /*************************************************************************** */
-// Creating an array of images
-// (function() {
+//Creating an array of images
+(function() {
 
-//     var myArrayAr = [
-//         'images/view1.jpg',  
-//         'images/view2.jpg', 
-//         'images/view3.jpg', 
-//         'imaes/view4.jpg', 
-//         'images/view5.jpg', 
-//         'images/view6.jpg'
-//     ];
+    var myArrayAr = [
+        'images/view1.jpg',  
+        'images/view2.jpg', 
+        'images/view3.jpg', 
+        'imaes/view4.jpg', 
+        'images/view5.jpg', 
+        'images/view6.jpg'
+    ];
 
-//         var counterImages = 0;
+        var counterImages = 0;
          
-//         //chagImage();
+        //chagImage();
 
-//        setInterval(chagImage, 1000);
+       setInterval(chagImage, 1000);
 
-//        function chagImage() {
-//         document
-//             .getElementById("myImages")
-//             .setAttribute("src","../images/" + myArrayAr[counterImages]);
-//             counterImages++;
+       function chagImage() {
+        document
+            .getElementById("myImages")
+            .setAttribute("src","../images/" + myArrayAr[counterImages]);
+            counterImages++;
 
-//         if(counterImages===myArrayAr.length) {
+        if(counterImages===myArrayAr.length) {
 
-//             counterImages = 0;
-//         }
-//        }
+            counterImages = 0;
+        }
+       }
 
-// }) ();
+}) ();
 
-// var imageAr = ['images/view1.jpg', 'images/view2.jpg', 'images/view3.jpg', 'imaes/view4.jpg', 'images/view5.jpg', 'images/view6.jpg'];
+// var imageAr = ['images/view1.jpg', 
+// 'images/view2.jpg', 
+// 'images/view3.jpg', 
+// 'imaes/view4.jpg',
+//  'images/view5.jpg',
+//   'images/view6.jpg'
+// ];
+
 
 // // Functuon to change the image rotate
 // function chgImage(){
@@ -88,10 +95,20 @@
 
 //document.querySelector all method
 // crete nodeList to chane the colour
-// var colourbuttons = document.querySelectorAll("calPicker");
+// var colourbuttons = document.querySelectorAll(".calPicker");
 // console.dir(colourbuttons);
 
-//You will need to create that function ie:
+// for(var i =0; i>colourbuttons.length; i++ ){
+//    console.dir(colourbuttons[i])
+//    colourbuttons[i].addEventListener("click", chgColour)
+// }
+
+// function chgColour(ev){
+
+//    console.info(ev.target)
+// }
+
+// You will need to create that function ie:
 // function chgColour(ev){
 //     console.dir(ev.target.classList)
 //    }
@@ -100,13 +117,20 @@
 
    //***************************************************************************************** */
    // Working with the window objects
-//    console.dir(window.location)
+    console.dir(window.location.href)
+    var url = window.location.href;
+    console.dir(url.split("/").pop())
+    var url = window.location.href;
+    var filename = url.split('/').pop();
+    
+
 
 //    var url = window.location.href;
 //  console.dir(url.split('/'));
 
 //  var url = window.location.href;
 //  var filename = url.split('/').pop();
+
 
  // challenge of html list of links here ....................................................
 
